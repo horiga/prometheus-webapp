@@ -1,4 +1,4 @@
-package org.horiga.study.webapp.prometheus.autoconfig;
+package org.horiga.study.webapp.prometheus.autoconfigure;
 
 import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.hotspot.GarbageCollectorExports;

@@ -5,7 +5,7 @@ import io.prometheus.client.CollectorRegistry;
 public class CounterService extends PrometheusMetricService
 		implements org.springframework.boot.actuate.metrics.CounterService {
 
-	protected CounterService(CollectorRegistry registry) {
+	public CounterService(CollectorRegistry registry) {
 		super(registry);
 	}
 

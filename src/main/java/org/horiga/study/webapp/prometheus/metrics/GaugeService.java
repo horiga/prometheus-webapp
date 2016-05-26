@@ -5,7 +5,7 @@ import io.prometheus.client.CollectorRegistry;
 public class GaugeService extends PrometheusMetricService
 		implements org.springframework.boot.actuate.metrics.GaugeService {
 
-	protected GaugeService(CollectorRegistry registry) {
+	public GaugeService(CollectorRegistry registry) {
 		super(registry);
 	}
 

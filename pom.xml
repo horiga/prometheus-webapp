@@ -48,6 +48,22 @@
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_servlet</artifactId>
             <version>0.0.14</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.eclipse.jetty</groupId>
+                    <artifactId>jetty-servlet</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>javax.servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>io.prometheus</groupId>
+            <artifactId>simpleclient_dropwizard</artifactId>
+            <version>0.0.14</version>
         </dependency>
 
         <dependency>

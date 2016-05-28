@@ -1,5 +1,6 @@
 package org.horiga.study.webapp.prometheus;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,16 +15,21 @@ public class Application {
 		SpringApplication.run(Application.class);
 	}
 
+	@Autowired
+	EchoService service;
+
 	@RequestMapping("/echo")
-	public String echo(@RequestParam(value = "echo", required = false, defaultValue = "hello!!") String echo)
+	public String echo(
+			@RequestParam(value = "echo", required = false, defaultValue = "hello!!") String echo)
 			throws Exception {
 		if ("error".equals(echo))
 			throw new IllegalArgumentException("error");
-		return echo;
+		return service.echo(echo);
 	}
 
 	@RequestMapping("/hoge/fuga")
-		public String hoge_fuga(@RequestParam(value = "echo", required = false, defaultValue = "hello!!") String echo) {
+	public String hoge_fuga(
+			@RequestParam(value = "echo", required = false, defaultValue = "hello!!") String echo) {
 		return echo;
 	}
 }

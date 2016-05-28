@@ -2,10 +2,12 @@ package org.horiga.study.webapp.prometheus.metrics;
 
 import io.prometheus.client.CollectorRegistry;
 import io.prometheus.client.Gauge;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 
+@Slf4j
 public abstract class PrometheusMetricService {
 
 	private final CollectorRegistry registry;

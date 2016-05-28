@@ -11,10 +11,13 @@ spring-boot prometheus exporter example
 
 ```
 > curl http://localhost:8080/echo
-hello!!%                                                                                                                                                                          > curl http://localhost:8080/echo
-hello!!%                                                                                                                                                                          > curl http://localhost:8080/fuga/hoge
-{"timestamp":1464447609888,"status":404,"error":"Not Found","message":"No message available","path":"/fuga/hoge"}%                                                                > curl http://localhost:8080/fuga/hoge
-{"timestamp":1464447618234,"status":404,"error":"Not Found","message":"No message available","path":"/fuga/hoge"}%                                                                > curl http://localhost:8080/hoge/fuga
+hello!!%
+> curl http://localhost:8080/echo
+hello!!% > curl http://localhost:8080/fuga/hoge
+{"timestamp":1464447609888,"status":404,"error":"Not Found","message":"No message available","path":"/fuga/hoge"}%
+ > curl http://localhost:8080/fuga/hoge
+{"timestamp":1464447618234,"status":404,"error":"Not Found","message":"No message available","path":"/fuga/hoge"}%
+> curl http://localhost:8080/hoge/fuga
 hello!!%                                                                                                                                                                          > curl http://localhost:8080/echo\?echo\=error
 {"timestamp":1464447631273,"status":500,"error":"Internal Server Error","exception":"java.lang.IllegalArgumentException","message":"error","path":"/echo"}%
 

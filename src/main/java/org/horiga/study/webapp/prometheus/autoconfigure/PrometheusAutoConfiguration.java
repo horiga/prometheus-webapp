@@ -35,7 +35,7 @@ public class PrometheusAutoConfiguration {
 	@Value("${prometheus.metrics.export.memoryPools.enable:true}")
 	private boolean enableMemoryPoolsExports;
 
-	@Value("${prometheus.metrics.export.memoryPools.enable:false}")
+	@Value("${prometheus.metrics.export.standardExports.enable:false}")
 	private boolean enableStandardExports;
 
 	@Value("${prometheus.metrics.export.garbageCollector.enable:true}")

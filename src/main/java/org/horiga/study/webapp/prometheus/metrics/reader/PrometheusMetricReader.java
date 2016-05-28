@@ -18,7 +18,7 @@ public class PrometheusMetricReader implements MetricReader {
 	@Override
 	public Metric<?> findOne(String name) {
 		log.info("[findOne]");
-		
+
 		// TODO
 
 		return null;
